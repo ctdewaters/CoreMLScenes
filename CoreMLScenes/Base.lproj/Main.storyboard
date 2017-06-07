@@ -1,7 +1,8 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="13122.17" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="11134"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="13122.17"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--Application-->
@@ -673,7 +674,7 @@
                         <outlet property="delegate" destination="Voe-Tx-rLC" id="PrD-fu-P6m"/>
                     </connections>
                 </application>
-                <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModuleProvider="target"/>
+                <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="CoreMLScenes" customModuleProvider="target"/>
                 <customObject id="YLy-65-1bz" customClass="NSFontManager"/>
                 <customObject id="Ady-hI-5gd" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -700,11 +701,60 @@
         <!--View Controller-->
         <scene sceneID="hIz-AP-VOD">
             <objects>
-                <viewController id="XfG-lQ-9wD" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="XfG-lQ-9wD" customClass="ViewController" customModule="CoreMLScenes" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" wantsLayer="YES" id="m2S-Jp-Qdl">
                         <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ikx-uA-xE9">
+                                <rect key="frame" x="161" y="87" width="159" height="163"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="159" id="KY5-R4-4Z8"/>
+                                    <constraint firstAttribute="height" constant="163" id="c0N-Dk-7wv"/>
+                                </constraints>
+                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" id="IFG-gS-Q3l"/>
+                            </imageView>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="oyd-UA-8LF">
+                                <rect key="frame" x="91" y="29" width="298" height="38"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="294" id="Rjw-RQ-bsM"/>
+                                    <constraint firstAttribute="height" constant="38" id="alX-zv-Duo"/>
+                                </constraints>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Label" id="VrW-NI-pn3">
+                                    <font key="font" metaFont="systemBold" size="26"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="QT9-aB-YGt">
+                                <rect key="frame" x="345" y="13" width="121" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="109" id="On4-JT-k8T"/>
+                                    <constraint firstAttribute="height" constant="21" id="gRq-Ln-kng"/>
+                                </constraints>
+                                <buttonCell key="cell" type="push" title="Choose Image" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="2ZS-t2-imJ">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="chooseImage:" target="XfG-lQ-9wD" id="YQd-GM-hxd"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="QT9-aB-YGt" secondAttribute="bottom" constant="20" id="2dY-NG-hZB"/>
+                            <constraint firstItem="oyd-UA-8LF" firstAttribute="top" secondItem="Ikx-uA-xE9" secondAttribute="bottom" constant="20" id="Tiq-gM-bcm"/>
+                            <constraint firstItem="Ikx-uA-xE9" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" id="XNz-Bd-9jL"/>
+                            <constraint firstItem="Ikx-uA-xE9" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="20" id="Xb5-x5-Fr4"/>
+                            <constraint firstItem="oyd-UA-8LF" firstAttribute="centerX" secondItem="Ikx-uA-xE9" secondAttribute="centerX" id="czH-pE-ld3"/>
+                            <constraint firstAttribute="trailing" secondItem="QT9-aB-YGt" secondAttribute="trailing" constant="20" id="lLP-3G-toM"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="chooseImage" destination="QT9-aB-YGt" id="x1t-F4-yvU"/>
+                        <outlet property="imageView" destination="Ikx-uA-xE9" id="3ze-yX-7VD"/>
+                        <outlet property="label" destination="oyd-UA-8LF" id="cpk-QV-qaF"/>
+                    </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>

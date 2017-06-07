@@ -11,6 +11,7 @@
 		B83B74881EE76E4B009C3D94 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B83B74871EE76E4B009C3D94 /* ViewController.swift */; };
 		B83B748A1EE76E4B009C3D94 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B83B74891EE76E4B009C3D94 /* Assets.xcassets */; };
 		B83B748D1EE76E4B009C3D94 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B83B748B1EE76E4B009C3D94 /* Main.storyboard */; };
+		B83B74961EE76E60009C3D94 /* GoogLeNetPlaces.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = B83B74951EE76E60009C3D94 /* GoogLeNetPlaces.mlmodel */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +22,7 @@
 		B83B748C1EE76E4B009C3D94 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B83B748E1EE76E4B009C3D94 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B83B748F1EE76E4B009C3D94 /* CoreMLScenes.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CoreMLScenes.entitlements; sourceTree = "<group>"; };
+		B83B74951EE76E60009C3D94 /* GoogLeNetPlaces.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = GoogLeNetPlaces.mlmodel; path = ../../../Downloads/GoogLeNetPlaces.mlmodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +55,7 @@
 		B83B74841EE76E4B009C3D94 /* CoreMLScenes */ = {
 			isa = PBXGroup;
 			children = (
+				B83B74951EE76E60009C3D94 /* GoogLeNetPlaces.mlmodel */,
 				B83B74851EE76E4B009C3D94 /* AppDelegate.swift */,
 				B83B74871EE76E4B009C3D94 /* ViewController.swift */,
 				B83B74891EE76E4B009C3D94 /* Assets.xcassets */,
@@ -135,6 +138,7 @@
 			files = (
 				B83B74881EE76E4B009C3D94 /* ViewController.swift in Sources */,
 				B83B74861EE76E4B009C3D94 /* AppDelegate.swift in Sources */,
+				B83B74961EE76E60009C3D94 /* GoogLeNetPlaces.mlmodel in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
