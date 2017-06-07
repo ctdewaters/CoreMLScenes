@@ -7,14 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B815AD0D1EE8660900FBA0F9 /* GoogLeNetPlaces.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = B815AD0C1EE8660800FBA0F9 /* GoogLeNetPlaces.mlmodel */; };
 		B83B74861EE76E4B009C3D94 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B83B74851EE76E4B009C3D94 /* AppDelegate.swift */; };
 		B83B74881EE76E4B009C3D94 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B83B74871EE76E4B009C3D94 /* ViewController.swift */; };
 		B83B748A1EE76E4B009C3D94 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B83B74891EE76E4B009C3D94 /* Assets.xcassets */; };
 		B83B748D1EE76E4B009C3D94 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B83B748B1EE76E4B009C3D94 /* Main.storyboard */; };
-		B83B74961EE76E60009C3D94 /* GoogLeNetPlaces.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = B83B74951EE76E60009C3D94 /* GoogLeNetPlaces.mlmodel */; };
+		B83B749C1EE832AC009C3D94 /* NSObject+CGImageToCVPixelBuffer.m in Sources */ = {isa = PBXBuildFile; fileRef = B83B749B1EE832AC009C3D94 /* NSObject+CGImageToCVPixelBuffer.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B815AD0C1EE8660800FBA0F9 /* GoogLeNetPlaces.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = GoogLeNetPlaces.mlmodel; path = ../../../Downloads/GoogLeNetPlaces.mlmodel; sourceTree = "<group>"; };
 		B83B74821EE76E4B009C3D94 /* CoreMLScenes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoreMLScenes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B83B74851EE76E4B009C3D94 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B83B74871EE76E4B009C3D94 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,7 +24,9 @@
 		B83B748C1EE76E4B009C3D94 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B83B748E1EE76E4B009C3D94 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B83B748F1EE76E4B009C3D94 /* CoreMLScenes.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CoreMLScenes.entitlements; sourceTree = "<group>"; };
-		B83B74951EE76E60009C3D94 /* GoogLeNetPlaces.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = GoogLeNetPlaces.mlmodel; path = ../../../Downloads/GoogLeNetPlaces.mlmodel; sourceTree = "<group>"; };
+		B83B74991EE832AC009C3D94 /* CoreMLScenes-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CoreMLScenes-Bridging-Header.h"; sourceTree = "<group>"; };
+		B83B749A1EE832AC009C3D94 /* NSObject+CGImageToCVPixelBuffer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+CGImageToCVPixelBuffer.h"; sourceTree = "<group>"; };
+		B83B749B1EE832AC009C3D94 /* NSObject+CGImageToCVPixelBuffer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+CGImageToCVPixelBuffer.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,13 +59,16 @@
 		B83B74841EE76E4B009C3D94 /* CoreMLScenes */ = {
 			isa = PBXGroup;
 			children = (
-				B83B74951EE76E60009C3D94 /* GoogLeNetPlaces.mlmodel */,
+				B815AD0C1EE8660800FBA0F9 /* GoogLeNetPlaces.mlmodel */,
 				B83B74851EE76E4B009C3D94 /* AppDelegate.swift */,
 				B83B74871EE76E4B009C3D94 /* ViewController.swift */,
+				B83B749A1EE832AC009C3D94 /* NSObject+CGImageToCVPixelBuffer.h */,
+				B83B749B1EE832AC009C3D94 /* NSObject+CGImageToCVPixelBuffer.m */,
 				B83B74891EE76E4B009C3D94 /* Assets.xcassets */,
 				B83B748B1EE76E4B009C3D94 /* Main.storyboard */,
 				B83B748E1EE76E4B009C3D94 /* Info.plist */,
 				B83B748F1EE76E4B009C3D94 /* CoreMLScenes.entitlements */,
+				B83B74991EE832AC009C3D94 /* CoreMLScenes-Bridging-Header.h */,
 			);
 			path = CoreMLScenes;
 			sourceTree = "<group>";
@@ -98,6 +105,7 @@
 				TargetAttributes = {
 					B83B74811EE76E4B009C3D94 = {
 						CreatedOnToolsVersion = 9.0;
+						LastSwiftMigration = 0900;
 					};
 				};
 			};
@@ -136,9 +144,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B83B749C1EE832AC009C3D94 /* NSObject+CGImageToCVPixelBuffer.m in Sources */,
 				B83B74881EE76E4B009C3D94 /* ViewController.swift in Sources */,
 				B83B74861EE76E4B009C3D94 /* AppDelegate.swift in Sources */,
-				B83B74961EE76E60009C3D94 /* GoogLeNetPlaces.mlmodel in Sources */,
+				B815AD0D1EE8660900FBA0F9 /* GoogLeNetPlaces.mlmodel in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -262,6 +271,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = CoreMLScenes/CoreMLScenes.entitlements;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = AP48SCT3J2;
@@ -269,6 +279,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.CollinDeWaters.CoreMLScenes;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "CoreMLScenes/CoreMLScenes-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
@@ -277,6 +289,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = CoreMLScenes/CoreMLScenes.entitlements;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = AP48SCT3J2;
@@ -284,6 +297,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.CollinDeWaters.CoreMLScenes;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "CoreMLScenes/CoreMLScenes-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
@@ -307,6 +321,7 @@
 				B83B74941EE76E4B009C3D94 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
